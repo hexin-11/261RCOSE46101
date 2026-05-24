@@ -181,6 +181,14 @@ A large entropy alignment weight harms classification performance. In the curren
 
 ![Main Results](experiments/results/main_results_bar_chart.png)
 
+### Tokenizer Fragmentation Analysis
+
+![Tokenizer Ratio](experiments/results/tokenizer_ratio_bar_chart.png)
+
+### Raw Attention Entropy Comparison
+
+![Attention Entropy](experiments/results/attention_entropy_bar_chart.png)
+
 ### Attention Entropy Distance to Teacher
 
 ![Entropy Distance](experiments/results/entropy_distance_bar_chart.png)
