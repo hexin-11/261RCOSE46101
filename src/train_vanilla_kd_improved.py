@@ -2,7 +2,7 @@
 Improved Vanilla Knowledge Distillation baseline for KLUE-NLI.
 
 This script trains a student model using soft labels from the improved
-fine-tuned XLM-R teacher model.
+fine-tuned XLM-R teacher model and saves the trained student model.
 """
 
 import os
@@ -96,7 +96,10 @@ def main():
     student_model_name = "distilbert-base-multilingual-cased"
 
     result_dir = "experiments/results"
+    student_output_dir = "experiments/vanilla_kd_improved_student"
+
     os.makedirs(result_dir, exist_ok=True)
+    os.makedirs(student_output_dir, exist_ok=True)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
@@ -198,6 +201,10 @@ def main():
         f.write(str(results))
 
     print(f"Saved results to {output_path}")
+
+    student_model.save_pretrained(student_output_dir)
+    tokenizer.save_pretrained(student_output_dir)
+    print(f"Saved improved Vanilla KD student model to {student_output_dir}")
 
 
 if __name__ == "__main__":
