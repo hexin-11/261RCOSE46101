@@ -1,1 +1,1 @@
-{'eval_loss': 0.932023855428847, 'eval_accuracy': 0.56}
+{'eval_loss': 0.9453672908601307, 'eval_accuracy': 0.547}
