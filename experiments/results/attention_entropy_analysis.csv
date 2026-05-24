@@ -1,0 +1,4 @@
+model,accuracy,attention_entropy,entropy_distance_to_teacher
+Improved Teacher XLM-R,0.499,156.47631811523436,0.0
+Improved Vanilla KD Student,0.547,190.19862866210937,33.72231054687501
+SEAD beta=0.001 Student,0.544,168.32470642089845,11.848388305664088
